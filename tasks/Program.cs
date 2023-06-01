@@ -7,3 +7,15 @@
     }
     return result;
 }
+int SumOfNumber(int number) // Задача 27: Напишите программу, которая принимает на вход число и выдаёт сумму цифр в числе.
+{
+	int sum = 0;
+	int num = 0;
+	while(number != 0)
+	{
+		num = number%10;
+		sum += num;
+		number /= 10;
+	}
+	return sum;
+}
