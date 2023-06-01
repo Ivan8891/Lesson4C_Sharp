@@ -19,6 +19,7 @@ int SumOfNumber(int number) // Задача 27: Напишите програм�
 	}
 	return sum;
 }
+		
 void Array() // Задача 29: Напишите программу, которая задаёт массив из 8 элементов и выводит их на экран.
 {
 	int[] array = new int[EnterNumber("Введите количество элементов в массиве: ")];
@@ -28,3 +29,14 @@ void Array() // Задача 29: Напишите программу, котор
 	}
 	Console.WriteLine($"Ваш массив: [{String.Join(", ", array)}]");
 }
+int EnterNumber(string text)
+{
+    Console.WriteLine(text);
+    int number = Convert.ToInt32(Console.ReadLine());
+    return number;
+}
+Console.WriteLine($"Число А в степени В = {RaiseToPower(EnterNumber("Введите число А"), EnterNumber("Введите число B"))}");
+Console.WriteLine();
+Console.WriteLine($"Сумма цифр = {SumOfNumber(EnterNumber("Введите число для расчета суммы его цифр: "))}");
+Console.WriteLine();
+Array();
